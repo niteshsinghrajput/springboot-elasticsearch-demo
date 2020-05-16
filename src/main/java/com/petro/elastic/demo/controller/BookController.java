@@ -48,8 +48,8 @@ public class BookController {
         return "Book has been deleted Successfully";
     }
 
-    @GetMapping("books")
-    public List<Book> getBookByTitle(@RequestParam("title")String title){
+    @GetMapping("books/search")
+    public List<Book> getBookByBookTitle(@RequestParam("title") String title){
         return service.getBooksByTitle(title);
     }
 }
